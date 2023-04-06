@@ -188,8 +188,6 @@ $ python Teardroid.py -b your_app_name
 
 [!["Logo"](https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/7kXYDks/20221028-233129-0000.png)](https://breached.vc/Thread-Selling-SCATTER-ALFA-ANDROID-BOTNET)
 
-##### REAL TIME COMMUNICATION BETWEEN BECON AND SERVER
-
 ##### SUPPORT ALL THE LATEST VERSION OF ANDROID
 
 ##### STEALTHY, RESILIENT AND COST-EFFECTIVE
@@ -198,13 +196,11 @@ $ python Teardroid.py -b your_app_name
 
 ##### ADVANCED ATTACK TECHNIQUES
 
-##### UNKILLABLE AND UNINSTALLABLE
+##### UNKILLABLE AND UNINSTALLABLE APK
 
 ##### INBUILT GEO FENCING
 
-##### EASY TO OPERATE
-
-##### STABLE BECON
+##### STABLE APK AND CONNECTION
 
 ##### VNC
 

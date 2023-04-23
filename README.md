@@ -88,7 +88,8 @@ $ pip install -r requirements.txt
 ```
 
 - change project key to connect with database
-- Set up an account at [deta.sh](https://web.deta.sh/) and go to project keys and create a new key and copy it
+- Set up an account at [deta.space](https://deta.space/) and go to collections click on new collection enter a random name and click create
+- once the collection is created click on project settings generate a new deta key and copy it
 
 ```bash
 $ nano ./db/database.py

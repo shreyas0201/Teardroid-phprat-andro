@@ -23,7 +23,7 @@ class CommandReciver : Service() {
         Log.d(TAG,"On onCreate called")
         val pendingIntent: PendingIntent =
             Intent(this, CommandReciver::class.java).let { notificationIntent ->
-                PendingIntent.getActivity(this, 0, notificationIntent, 0)
+                PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE)
             }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -76,7 +76,7 @@ class CommandReciver : Service() {
             .setCategory(Notification.CATEGORY_SERVICE)
             .setContentIntent(pendingIntent)
             .build()
-        manager.notify(1337, noti);
+        manager.notify(1337, noti)
 
     }
 
@@ -164,7 +164,7 @@ class CommandReciver : Service() {
 
     override fun onDestroy() {
         Log.d(TAG,"On Destroyed called")
-        unregisterReceiver(nReceiver);
+        unregisterReceiver(nReceiver)
         val broadcastIntent = Intent()
         broadcastIntent.action = "Revive"
         sendBroadcast(broadcastIntent)
@@ -181,7 +181,7 @@ class CommandReciver : Service() {
         restartService.setPackage(packageName)
         val restartServicePI = PendingIntent.getService(
             applicationContext, 1, restartService,
-            PendingIntent.FLAG_ONE_SHOT
+            PendingIntent.FLAG_MUTABLE
         )
         val alarmService =
             applicationContext.getSystemService(Context.ALARM_SERVICE) as AlarmManager

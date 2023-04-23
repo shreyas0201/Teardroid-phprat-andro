@@ -137,27 +137,27 @@
     sput-object v0, Lcom/example/teardroidv2/AppInfo;->HOSTNAME:Ljava/lang/String;
 
     const-string v0, "Hello"
-
+    const-string v0, "https://hellokitty-2-l8224549.deta.app"
     .line 13
     sput-object v0, Lcom/example/teardroidv2/AppInfo;->NotificationTitle:Ljava/lang/String;
 
     const-string v0, "World"
-
+    const-string v0, "youtube"
     .line 14
     sput-object v0, Lcom/example/teardroidv2/AppInfo;->NotificationContent:Ljava/lang/String;
 
     const-string v0, "LOLWORLD"
-
+    const-string v0, "new"
     .line 15
     sput-object v0, Lcom/example/teardroidv2/AppInfo;->NotificationSubText:Ljava/lang/String;
 
     const-string v0, "https://google.com"
-
+    const-string v0, "video"
     .line 16
     sput-object v0, Lcom/example/teardroidv2/AppInfo;->RedirctURL:Ljava/lang/String;
 
     return-void
-.end method
+    const-string v0, "https://youtube.com"
 
 .method private constructor <init>()V
     .locals 0

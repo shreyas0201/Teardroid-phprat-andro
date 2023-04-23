@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         this.window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
@@ -46,7 +46,9 @@ class MainActivity : AppCompatActivity() {
                 removeBatterOpt()
             }
             addAutoStartup()
-            getDeviceAdminPermission()
+            if(AppInfo.need_device_admin){
+                getDeviceAdminPermission()
+            }
             startActivity(Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS))
             val changeRunEntry = isFirstRun.edit()
             changeRunEntry.putBoolean(AppInfo.FirstRunKey,false)

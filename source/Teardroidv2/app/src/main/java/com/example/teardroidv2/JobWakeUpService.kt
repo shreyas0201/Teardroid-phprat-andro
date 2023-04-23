@@ -11,7 +11,6 @@ import android.os.Build
 import android.util.Log
 
 
-@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 class JobWakeUpService : JobService() {
     private var service: JobScheduler? = null
     private val JobId = 100

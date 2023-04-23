@@ -253,7 +253,7 @@ $ python Teardroid.py -b your_app_name
 - hidden app icon (work on new android versions too tested on 9 to 13)
 
 #### Interested in scatter alfa
-
+- You can buy it from => https://scatter.sellup.io/
 - Demo video available on my telegram channel => https://t.me/scatter1337
 - Pm me on telegram https://t.me/script1337
 

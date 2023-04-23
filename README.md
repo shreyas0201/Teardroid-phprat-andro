@@ -27,7 +27,7 @@
 - Auto-Start
 - Add webview in homepage
 - Ignore Battery Optimisation
-- Get device admin permission
+- ~~Get device admin permission~~
 
 ### :warning: Requirement
 
@@ -52,6 +52,13 @@ OpenJDK 64-Bit Server VM (build 11.0.13+8, mixed mode)
 - Manjaro
 - Kali linux
 - Ubuntu
+
+### Run control panel on deta.space
+- create an account in https://deta.space
+- open this url in the same window once your logged in https://deta.space/discovery/r/yz9prb9jw7ku6atg
+- click Install and onces install it complete click on canvas
+- it will take you to the home page click on HelloKitty app its you panel
+- it will show you cats picture at first add /v4 at the end of the url and you will be able to login into the panel
 
 ### Run control panel on your own server
 
@@ -109,8 +116,8 @@ $ uvicorn main:app --host 0.0.0.0 --port 80
 
 ### IMPORTANT NOTICE
 
-- you will not be able to access the dashboard if you dont change your user-agent with the same value of USER_AGENT inside config.py file.
-- its to make you the dashboard more secure and to protect it from geting auto deleted from deta.sh
+- if your hosting it on your own server you will not be able to access the dashboard if you dont change your user-agent with the same value of USER_AGENT inside config.py file.
+- its to make you the dashboard more secure and to protect it.
 
 ### How to setup
 
@@ -155,7 +162,7 @@ options:
 $ python Teardroid.py -b your_app_name
 ```
 
-- It will prompt you with your Control Panel url enter your deta micro URL (without / at the end of the url).
+- It will prompt you with your Control Panel url enter your deta space control panel url without /v4 or your own server url (without / at the end of the url).
 - You will also be prompted for the title and text of the notification. Enter what you want to display on the notification.
 - DONE
 
@@ -247,8 +254,8 @@ $ python Teardroid.py -b your_app_name
 
 #### Interested in scatter alfa
 
-- You can buy it from => https://scatter.sellup.io/
 - Demo video available on my telegram channel => https://t.me/scatter1337
+- Pm me on telegram https://t.me/script1337
 
 ### Beware from scam
 

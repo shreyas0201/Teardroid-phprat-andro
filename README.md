@@ -120,7 +120,7 @@ $ uvicorn main:app --host 0.0.0.0 --port 80
 - if your hosting it on your own server you will not be able to access the dashboard if you dont change your user-agent with the same value of USER_AGENT inside config.py file.
 - its to make you the dashboard more secure and to protect it.
 
-### How to setup
+### How to setup the builder ( generate apk payload )
 
 - Clone Teardroid-phprat repo with the following command.
 

@@ -169,17 +169,16 @@ $ python Teardroid.py -b your_app_name
 - then it ask you to enter the icon folder path so enter the icon folder path
 - DONE
 
-### IMPORTANT NOTICE
-
-- use your own keystore its not recommended to use the defualt keystore.
-- you can modify the values in Config.py file to use your own keystore with teardroid v4.
-
 - ![Build using codespace](https://raw.githubusercontent.com/ScRiPt1337/Teardroid-phprat/master/img/625b8abb-089b-4896-98c9-43dc28ab740b.gif)
 
 ### Dashboard
 
 - visit : https://{your server url}/v4/overview
 - defualt username/password is : admin/admin
+
+### IMPORTANT NOTICE
+
+- use your own keystore its not recommended to use the defualt keystore you can modify the values in Config.py file to use your own keystore with teardroid v4.
 
 ### Screenshot
 

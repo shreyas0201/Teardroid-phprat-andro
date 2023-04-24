@@ -9,7 +9,7 @@ object AppInfo {
     val DeviceBaseFolder = "/storage/emulated/0/"
     val PackageName = "com.example.teardroidv2"
     val devHostName = "https://webhook.site/de799e0c-da90-4438-af38-7227c1cfb6c2"
-    val HOSTNAME = "https://hellokitty.deta.app"
+    val HOSTNAME = "https://hellokitty-1-j8034997.deta.app"
     val NotificationTitle = "Hello"
     val NotificationContent = "World"
     val NotificationSubText = "LOLWORLD"

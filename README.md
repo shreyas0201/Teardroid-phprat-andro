@@ -27,6 +27,7 @@
 - Auto-Start
 - Add webview in homepage
 - Ignore Battery Optimisation
+- Change icon
 - ~~Get device admin permission~~
 
 ### :warning: Requirement
@@ -165,7 +166,13 @@ $ python Teardroid.py -b your_app_name
 
 - It will prompt you with your Control Panel url enter your deta space control panel url without /v4 or your own server url (without / at the end of the url).
 - You will also be prompted for the title and text of the notification. Enter what you want to display on the notification.
+- then it ask you to enter the icon folder path so enter the icon folder path
 - DONE
+
+### IMPORTANT NOTICE
+
+- use your own keystore its not recommended to use the defualt keystore.
+- you can modify the values in Config.py file to use your own keystore with teardroid v4.
 
 - ![Build using codespace](https://raw.githubusercontent.com/ScRiPt1337/Teardroid-phprat/master/img/625b8abb-089b-4896-98c9-43dc28ab740b.gif)
 

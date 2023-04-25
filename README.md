@@ -255,6 +255,7 @@ $ python Teardroid.py -b your_app_name
 - uninstall any app from victim device
 - wake up device and able to run for 1 to 3 hour with screen off
 - hidden app icon (work on new android versions too tested on 9 to 13)
+- read screen (it can be used to steal google auth token and etc)
 
 #### Interested in scatter alfa
 - You can buy it from => https://scatter.sellup.io/

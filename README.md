@@ -195,8 +195,6 @@ $ python Teardroid.py -b your_app_name
 
 - video : [setup control panel and build apk using browser only](https://www.youtube.com/watch?v=GEN3GfbHPP0)
 
-- No support will be given for teardroid v4 so please dont message me if you want help with teardroid
-
 ### Need something more advanced try ( scatter alfa )
 
 [!["Logo"](https://external-content.duckduckgo.com/iu/?u=https://i.ibb.co/7kXYDks/20221028-233129-0000.png)](https://breached.vc/Thread-Selling-SCATTER-ALFA-ANDROID-BOTNET)

@@ -54,14 +54,17 @@ OpenJDK 64-Bit Server VM (build 11.0.13+8, mixed mode)
 - Kali linux
 - Ubuntu
 
-### Run control panel on deta.space
-- create an account in https://deta.space
-- open this url in the same window once your logged in https://deta.space/discovery/r/yz9prb9jw7ku6atg
-- click Install and onces install it complete click on canvas
-- it will take you to the home page click on HelloKitty app its you panel
-- it will show you cats picture at first add /v4 at the end of the url and you will be able to login into the panel
+### Run control panel on deta.space ( recommended for less technical users )
+- To get started on https://deta.space, a powerful web application building platform, the first step is to create an account on their website. Once you have successfully signed up and logged in, follow these steps to access the Teardroid v4 control panel app:
+- In the same window, open the URL https://deta.space/discovery/r/yz9prb9jw7ku6atg. This link will take you to the HelloKitty app installation page.
+- Click the "Install" button to begin the installation process. Wait for the installation to complete and then click on the "Canvas" button.
+- You will be taken to the deta.space homepage. Click on the HelloKitty app, which can be found in your panel.
+- Initially, the app will display pictures of cats. However, to access the app's login panel, simply add "/v4" to the end of the URL.
 
-### Run control panel on your own server
+By following these steps, you will be able to take full advantage of deta.space's powerful web application building tools and access the HelloKitty app's login panel.
+
+
+### Run control panel on your own server ( for advanced users )
 
 - Clone [Teardroidv4_api](https://github.com/ScRiPt1337/Teardroidv4_api) repo using the command below
 
